@@ -1,25 +1,25 @@
 {
   "name": "levels_plumbing_state",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "node server",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build --ssrManifest --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "preview": "cross-env NODE_ENV=production node server"
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start"
+  },
+  "type": "module",
+  "devDependencies": {
+    "solid-start-node": "^0.2.0",
+    "typescript": "^4.8.4",
+    "unocss": "^0.48.0",
+    "vite": "^3.1.8"
   },
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.18.2",
-    "sirv": "^2.0.2",
-    "solid-js": "^1.6.4"
+    "@solidjs/meta": "^0.28.0",
+    "@solidjs/router": "^0.6.0",
+    "solid-js": "^1.6.2",
+    "solid-start": "^0.2.0",
+    "undici": "^5.11.0"
   },
-  "devDependencies": {
-    "cross-env": "^7.0.3",
-    "unocss": "^0.48.0",
-    "vite": "^4.0.0",
-    "vite-plugin-solid": "^2.5.0"
+  "engines": {
+    "node": ">=16.8"
   }
 }
